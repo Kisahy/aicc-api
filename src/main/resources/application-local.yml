@@ -1,0 +1,25 @@
+# =============================================================
+# aicc-api — 로컬 개발 프로필
+# aicc-infra 도커 컨테이너의 MariaDB 에 연결
+# =============================================================
+
+spring:
+  datasource:
+    url: jdbc:mariadb://127.0.0.1:3306/aicc_platform?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    username: aicc_app
+    password: aicc_app_1234!
+    driver-class-name: org.mariadb.jdbc.Driver
+
+    # HikariCP 설정
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 10000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true

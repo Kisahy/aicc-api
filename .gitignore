@@ -1,0 +1,44 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# 로그
+*.log
+logs/
+
+# 빌드 산출물
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# 환경 설정 (민감 정보)
+# application-prod.yml 등 운영 프로필은 Git 제외
+application-prod.yml
+application-*.local.yml
